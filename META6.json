@@ -1,0 +1,21 @@
+{
+  "name": "Polyglot::Brainfuck",
+  "description": "A module that allows true inline use of Brainfuck code",
+  "version": "0.1",
+  "perl": "6.*",
+  "authors": [
+    "Matthew Stephen Stuckwisch"
+  ],
+  "auth": "zef:guifa",
+  "depends": [],
+  "build-depends": [],
+  "test-depends": [],
+  "provides": {
+    "Polyglot::Brainfuck": "lib/Polyglot/Brainfuck.rakumod",
+    "Polyglot::Brainfuck::Actions": "lib/Polyglot/Brainfuck/Actions.rakumod",
+    "Polyglot::Brainfuck::Grammar": "lib/Polyglot/Brainfuck/Grammar.rakumod"
+  },
+  "resources": [],
+  "license": "Artistic-2.0",
+  "source-url": "git://github.com/alabamenhu/PolyglotBrainfuck.git"
+}
