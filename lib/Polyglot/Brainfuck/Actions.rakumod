@@ -91,7 +91,7 @@ proto method BF-command { * }
 method BF-command:sym<+> (Mu $/) {
     make RakuAST::Statement::Expression.new(
         expression => RakuAST::ApplyPostfix.new(
-            postfix => RakuAST::Postfix.new('++'),
+            postfix => RakuAST::Postfix.new(:operator<++>),
             operand => MemLoc
         )
     )
@@ -101,7 +101,7 @@ method BF-command:sym<+> (Mu $/) {
 method BF-command:sym<-> (Mu $/) {
     make RakuAST::Statement::Expression.new( expression =>
         RakuAST::ApplyPostfix.new(
-           postfix => RakuAST::Postfix.new('--'),
+           postfix => RakuAST::Postfix.new(:operator<-->),
            operand => MemLoc
         )
     )
@@ -110,7 +110,7 @@ method BF-command:sym«<» (Mu $/) {
     make RakuAST::Statement::Expression.new(
         expression => RakuAST::ApplyPostfix.new(
             operand => Pointer,
-            postfix => RakuAST::Postfix.new('--')
+            postfix => RakuAST::Postfix.new(:operator<-->)
         )
     )
 }
@@ -118,7 +118,7 @@ method BF-command:sym«>» (Mu $/) {
     make RakuAST::Statement::Expression.new(
         expression => RakuAST::ApplyPostfix.new(
             operand => Pointer,
-            postfix => RakuAST::Postfix.new('++')
+            postfix => RakuAST::Postfix.new(:operator<++>)
         )
     )
 }

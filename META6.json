@@ -7,7 +7,9 @@
     "Matthew Stephen Stuckwisch"
   ],
   "auth": "zef:guifa",
-  "depends": [],
+  "depends": [
+    "Slangify:ver<0.0.3+>:auth<zef:lizmat>"
+  ],
   "build-depends": [],
   "test-depends": [],
   "provides": {
